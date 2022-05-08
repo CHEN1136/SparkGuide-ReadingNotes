@@ -14,26 +14,22 @@
             <artifactId>scala-library</artifactId>
             <version>2.12.8</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.12</artifactId>
             <version>3.0.0</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_2.12</artifactId>
             <version>3.0.0</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-hive_2.12</artifactId>
             <version>3.0.0</version>
             <!--<scope>provided</scope>-->
         </dependency>
-
         <!-- scope 不能使用provide scope=provided时，引用的artifact只在编译、测试阶段被加载，而在运行阶段，程序会认为容器中已经提供了这个artifact的jar包，所以程序就会抛出ClassNotFoundException异常。
 而scope=compile，则我们依赖的artifact会在编译、测试、运行阶段都被加载到容器中。-->
         <dependency>
@@ -49,8 +45,6 @@
             <version>4.13</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

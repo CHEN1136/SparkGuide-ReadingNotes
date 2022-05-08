@@ -1,5 +1,6 @@
 package scala
 
+import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
 
 object SQLHandler {

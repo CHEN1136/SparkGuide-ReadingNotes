@@ -1,10 +1,15 @@
 package scala.ProductionAPP
 
+import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.scheduler.SchedulingMode.FAIR
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.{col, expr}
 
 object LifeCycle {
-  val spark = SparkSession.builder().master("local[*]").getOrCreate()
+  val conf = new SparkConf()
+  conf.set("spark.scheduler.mode", "FAIR")
+  val spark = SparkSession.builder().config(conf).master("local[*]").getOrCreate()
+  spark.sparkContext.setLocalProperty("spark.scheduler.pool", "pool1")
   import spark.implicits._
 
   def main(args: Array[String]): Unit ={
