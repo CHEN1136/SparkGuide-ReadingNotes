@@ -4,7 +4,7 @@ import org.apache.spark.ml.evaluation.ClusteringEvaluator
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.col
 import scala.DateSetHandler.Flight
-import scala.StructuredStreamingHandler.spark
+import scala.StreamProcessing.StructuredStreamingHandler.spark
 
 object MLHandler {
   val spark = SparkSession.builder().master("local").getOrCreate()
