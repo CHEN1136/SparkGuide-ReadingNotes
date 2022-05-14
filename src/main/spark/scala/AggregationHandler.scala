@@ -25,7 +25,7 @@ object AggregationHandler {
     //skewness_and_kurtosis()
     //covariance_and_correlation()
     //complexTypeHandle()
-    //groupHandle()
+    groupHandle()
     //windowHandle()
     //groupSetHandle()
     //groupMetadata()
