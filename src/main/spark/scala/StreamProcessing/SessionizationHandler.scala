@@ -147,7 +147,7 @@ object SessionizationHandler {
     s += "timestamp:" + state.timestamp.toString + " "
     s += "activity:["
     for( i <- state.activities) {
-      s += i.toString + ","
+      s += i + ","
     }
     s += "]"
     println(s)
